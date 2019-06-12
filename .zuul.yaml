@@ -4,8 +4,8 @@
     parent: base
     nodeset:
       nodes:
-        - name: node_2
-          label: zuul-node2
+        - name: node
+          label: ubuntu-bionic
 - project:
     check:
       jobs:
