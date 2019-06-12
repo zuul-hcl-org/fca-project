@@ -1,0 +1,15 @@
+- job:
+    name: antbuildjob
+    run: antbuild.yaml
+    parent: base
+    nodeset:
+      nodes:
+        - name: node
+          label: ubuntu-bionic
+- project:
+    check:
+      jobs:
+        - antbuildjob
+    gate:
+      jobs:
+        - antbuildjob
