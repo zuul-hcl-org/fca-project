@@ -1,15 +1,27 @@
+# - job:
+  #  name: antbuildjob
+  #  run: playbooks/antbuild.yaml
+ #   parent: base
+#    nodeset:
+   #   nodes:
+  #      - name: node_2
+ #         label: zuul-node2
 - job:
-    name: antbuildjob
-    run: antbuild.yaml
+    name: myjob
+    run: playbooks/simpleecho.yaml
     parent: base
     nodeset:
       nodes:
-        - name: node
-          label: ubuntu-bionic
+         - name: node_2
+           label: zuul-node2
 - project:
-    check:
-      jobs:
-        - antbuildjob
-    gate:
-      jobs:
-        - antbuildjob
+   # check:
+    #  jobs:
+     #   - antbuildjob
+    #gate:
+     # jobs:
+      #  - antbuildjob
+
+    experimental:
+       jobs:
+        - myjob
