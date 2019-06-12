@@ -1,0 +1,13 @@
+- hosts: all
+  tasks:
+    - debug:
+        msg: " running with kube user"
+    - name: "Deletei the workspace dir before build"
+      shell: |
+            rm -rf /home/work
+      register: clean_output
+    - name: Clone git repo
+      git:
+        repo: https://github.com/jenkinsci/model-ant-project.git
+        dest: /home/work/
+      when: clean_output is succeeded

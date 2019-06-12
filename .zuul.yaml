@@ -1,11 +1,15 @@
 - job:
-    name: testjob
-    run: testjob.yaml
-
+    name: antbuildjob
+    run: playbooks/antbuild.yaml
+    parent: base
+    nodeset:
+      nodes:
+        - name: node
+          label: ubuntu-bionic
 - project:
     check:
       jobs:
-        - testjob
+        - antbuildjob
     gate:
       jobs:
-        - testjob
+        - antbuildjob
