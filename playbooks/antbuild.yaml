@@ -6,7 +6,6 @@
       shell: |
             rm -rf /home/work
       register: clean_output
-
     - name: Clone git repo
       git:
         repo: https://github.com/jenkinsci/model-ant-project.git
