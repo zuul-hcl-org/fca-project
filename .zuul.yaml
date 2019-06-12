@@ -5,7 +5,7 @@
     nodeset:
       nodes:
         - name: node
-          label: ubuntu-bionic
+          label: centos76
 - project:
     check:
       jobs:
