@@ -11,3 +11,6 @@
         repo: https://github.com/jenkinsci/model-ant-project.git
         dest: ~/work/
       when: clean_output is succeeded
+    - zuul_return:
+      data:
+        foo: bar
