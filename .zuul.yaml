@@ -1,7 +1,6 @@
 - job:
     name: gitsamplejob
-    run: playbooks/gitsamplejob.yaml
-    tags: regionindia
+    run: playbooks/pullrequest_dependent.yaml
     parent: base
     nodeset:
       nodes:
