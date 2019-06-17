@@ -1,5 +1,5 @@
 - job:
-    name: gitsamplejob
+    name: pullrequest_dependent
     run: playbooks/pullrequest_dependent.yaml
     parent: base
     nodeset:
@@ -30,6 +30,9 @@
       jobs:
         - gitsamplejob
         - gitsamplejob2
-     pullrequest:
+    pullrequest_label:
       jobs:
         - pullrequest_label
+    pullrequest_job:
+      jobs:
+        - pullrequest_dependent
