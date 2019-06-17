@@ -3,6 +3,7 @@
     - name: pull request label job
       debug:
         msg: " in pull request label job "
-  - zuul_return:
-      data:
-        zuul_tag: {{ zuul.jobtags }}
+    - name: "zuul return task"
+      zuul_return:
+        data:
+          zuul_tag: {{ zuul.jobtags }}
