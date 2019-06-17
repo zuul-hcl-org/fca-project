@@ -2,3 +2,5 @@
   tasks:
     - debug:
         msg: " {{ zuul.project.canonical_name }} "
+    - debug:
+        msg: " {{ zuul.jobtags }} "
