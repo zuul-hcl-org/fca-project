@@ -3,5 +3,6 @@
     - name: Sample project iteration
       debug:
         msg: " {{ zuul.build }} "
+      debug:
         msg: " {{ zuul.buildset }} "
-        msg: " {{ zuul.ref }} "
+
