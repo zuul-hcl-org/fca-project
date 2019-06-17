@@ -2,4 +2,4 @@
   tasks:
     - name: pull request dependent job
       debug:
-        msg: " {{ zuul_tag }} "
+        msg: " {{ zuul_tag }} on the repo {{ zuul.project.canonical_hostname }} "
