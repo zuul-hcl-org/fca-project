@@ -2,5 +2,4 @@
   tasks:
     - name: Sample project iteration
       debug:
-        msg: "Project {{ item.name }} is at {{ item.src_dir }}
-        with_items: {{ zuul.projects.values() | list }}
+        msg: " {{ zuul.change }} "
