@@ -9,8 +9,5 @@
 - project:
     check:
       jobs:
-        - gitsample-job
-    gate:
-      jobs:
-        - antbuildjob
+        - gitsamplejob
         
