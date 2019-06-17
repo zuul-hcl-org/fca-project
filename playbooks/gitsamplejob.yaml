@@ -1,10 +1,4 @@
 - hosts: all
   tasks:
     - debug:
-        msg: " {{ zuul.project.canonical_name }} "
-    - debug:
-        msg: " {{ zuul.change }} "
-    - debug:
-        msg: " {{ zuul.branch }} "
-    - debug:
         msg: " {{ zuul.message }} "
