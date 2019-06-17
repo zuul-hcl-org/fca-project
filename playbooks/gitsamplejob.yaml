@@ -1,4 +1,4 @@
 - hosts: all
   tasks:
     - debug:
-        msg: " {{ zuul.branch }} "
+        msg: " {{ zuul.message | b64decode }} "
