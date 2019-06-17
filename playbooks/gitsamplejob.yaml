@@ -3,6 +3,6 @@
     - debug:
         msg: " test git hub plugin "
     - debug:
-        msg: {{ zuul.project.name }}
-        msg: {{ zuul.branch }}
-        msg: {{ zuul.change }}
+        msg: " {{ zuul.project.name }} "
+        msg: " {{ zuul.branch }} "
+        msg: " {{ zuul.change }} "
