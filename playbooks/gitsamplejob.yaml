@@ -4,3 +4,9 @@
         msg: " {{ zuul.project.canonical_name }} "
     - debug:
         msg: " {{ zuul.jobtags }} "
+    - debug:
+        msg: " {{ zuul.change }} "
+    - deubg:
+        msg: " {{ zuul.brahcn }} "
+    - debug:
+        msg: " {{ zuul.message }} "
