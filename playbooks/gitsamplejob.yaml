@@ -2,4 +2,6 @@
   tasks:
     - name: Sample project iteration
       debug:
-        msg: " {{ zuul.artifacts }} "
+        msg: " {{ zuul.build }} "
+        msg: " {{ zuul.buildset }} "
+        msg: " {{ zuul.ref }} "
