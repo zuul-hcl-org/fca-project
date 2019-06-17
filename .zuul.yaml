@@ -1,6 +1,6 @@
 - job:
-    name: antbuildjob
-    run: playbooks/antbuild.yaml
+    name: gitsamplejob
+    run: playbooks/gitsamplejob.yaml
     parent: base
     nodeset:
       nodes:
