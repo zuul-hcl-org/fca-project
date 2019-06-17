@@ -1,6 +1,6 @@
 - hosts: all
   vars:
-    tags_available: " {{ zuul.jobtags } }"
+    tags_available: " {{ zuul.jobtags }} "
   tasks:
     - name: pull request label job
       debug:
