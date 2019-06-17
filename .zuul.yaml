@@ -16,9 +16,21 @@
       nodes:
         - name: node
           label: ubuntu-bionic
+- job:
+    name: pullrequest_label
+    run: playbooks/pullrequest_label.yaml
+    tags: regionindia
+    parent: base
+    nodeset:
+      nodes:
+        - name: node
+          label: ubuntu-bionic
+          
 - project:
     check:
       jobs:
         - gitsamplejob
         - gitsamplejob2
-        
+     pullrequest:
+      jobs:
+        - pullrequest_label
