@@ -1,6 +1,7 @@
 - job:
     name: gitsamplejob
     run: playbooks/gitsamplejob.yaml
+    tags: regionindia
     parent: base
     nodeset:
       nodes:
