@@ -2,6 +2,8 @@
     name: pullrequest_dependent
     run: playbooks/pullrequest_dependent.yaml
     parent: base
+    dependencies:
+       - name: pullrequest_label
     nodeset:
       nodes:
         - name: node
