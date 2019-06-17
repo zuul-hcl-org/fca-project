@@ -1,15 +1,39 @@
 - job:
-    name: antbuildjob
-    run: playbooks/antbuild.yaml
+    name: pullrequest_dependent
+    run: playbooks/pullrequest_dependent.yaml
     parent: base
+    dependencies:
+       - name: pullrequest_label
     nodeset:
       nodes:
         - name: node
           label: centos76
+- job:
+    name: gitsamplejob2
+    run: playbooks/gitsamplejob.yaml
+    tags: regionus
+    parent: base
+    nodeset:
+      nodes:
+        - name: node
+          label: ubuntu-bionic
+- job:
+    name: pullrequest_label
+    run: playbooks/pullrequest_label.yaml
+    tags: regionindia
+    parent: base
+    nodeset:
+      nodes:
+        - name: node
+          label: ubuntu-bionic
+          
 - project:
     check:
       jobs:
-        - antbuildjob
-    gate:
+        - gitsamplejob2
+    pullrequest_label:
       jobs:
-        - antbuildjob
+        - pullrequest_label
+    pullrequest_job:
+      jobs:
+        - pullrequest_dependent
