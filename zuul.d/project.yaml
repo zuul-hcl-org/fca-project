@@ -1,6 +1,0 @@
-- project:
-    name: ^.*$
-    pullrequest_label:
-      jobs: []
-    pullrequest_dependent:
-      jobs: []
