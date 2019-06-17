@@ -2,4 +2,4 @@
   tasks:
     - name: pull request dependent job
       debug:
-        msg: " {{ tags_available }} "
+        msg: " {{ tags_available }} and {{ zuul_tag }} "
