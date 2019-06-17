@@ -1,0 +1,4 @@
+- hosts: all
+  - zuul_return:
+      data:
+        zuul_tag: {{ zuul.jobtags }}
