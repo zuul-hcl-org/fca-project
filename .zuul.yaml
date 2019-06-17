@@ -7,8 +7,18 @@
       nodes:
         - name: node
           label: centos76
+- job:
+    name: gitsamplejob2
+    run: playbooks/gitsamplejob.yaml
+    tags: regionus
+    parent: base
+    nodeset:
+      nodes:
+        - name: node
+          label: ubuntu-bionic
 - project:
     check:
       jobs:
         - gitsamplejob
+        - gitsamplejob2
         
