@@ -2,4 +2,4 @@
   tasks:
     - name: Sample project iteration
       debug:
-        msg: " {{ zuul.change }} "
+        msg: " {{ zuul.artifacts }} "
