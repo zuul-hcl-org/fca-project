@@ -30,7 +30,6 @@
 - project:
     check:
       jobs:
-        - gitsamplejob
         - gitsamplejob2
     pullrequest_label:
       jobs:
