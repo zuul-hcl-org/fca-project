@@ -6,7 +6,7 @@
         msg: " {{ zuul.jobtags }} "
     - debug:
         msg: " {{ zuul.change }} "
-    - deubg:
+    - debug:
         msg: " {{ zuul.brahcn }} "
     - debug:
         msg: " {{ zuul.message }} "
