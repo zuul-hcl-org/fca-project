@@ -1,7 +1,0 @@
-- hosts: all
-  tasks:
-    - name: Sample project iteration
-      debug:
-        msg: " {{ zuul.jobtags }} "
-      debug:
-        msg: " {{ zuul.executor.hostname }} "
