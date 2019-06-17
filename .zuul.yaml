@@ -34,6 +34,4 @@
     pullrequest_label:
       jobs:
         - pullrequest_label
-    pullrequest_job:
-      jobs:
         - pullrequest_dependent
