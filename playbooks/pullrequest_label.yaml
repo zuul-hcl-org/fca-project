@@ -8,4 +8,4 @@
     - name: "zuul return task"
       zuul_return:
         data:
-          zuul_tag: " {{ var.zuul.jobtags }} "
+          zuul_tag: " {{ tags_available }} "
