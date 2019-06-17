@@ -5,6 +5,6 @@
     - debug:
         msg: " {{ zuul.change }} "
     - debug:
-        msg: " {{ zuul.brahcn }} "
+        msg: " {{ zuul.branch }} "
     - debug:
         msg: " {{ zuul.message }} "
