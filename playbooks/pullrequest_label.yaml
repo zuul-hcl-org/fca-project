@@ -5,7 +5,7 @@
   tasks:
     - name: pull request label job
       debug:
-        msg: " {{ tags_available }} in pull request label job {{ zuul.jobtags }}  "
+        msg: " {{ tags_available }} in pull request label job {{ zuul.jobtags }} {{ zuul.change_url }} "
     - name: "zuul return task"
       zuul_return:
         data:
