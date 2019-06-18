@@ -1,4 +1,5 @@
 - hosts: all
+  gather_facts: true
   vars:
     tags_available: " {{ zuul.jobtags }} "
   tasks:
@@ -9,3 +10,4 @@
       zuul_return:
         data:
           zuul_tag: " {{ tags_available }} "
+    - debug: msg="{{ hostvars[inventory_hostname] }}"
