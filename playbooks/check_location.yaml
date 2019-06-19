@@ -30,7 +30,7 @@
       register: user_location      
     - name: pull requested user location
       debug:
-       msg: "{{ user_location }}"
+       msg: "{{ user_location.stdout }}"
     - name: "zuul return task"
       zuul_return:
         data:
