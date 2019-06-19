@@ -1,37 +1,22 @@
-- job:
-    name: pullrequest_dependent
-    run: playbooks/pullrequest_dependent.yaml
-    parent: base
-    dependencies:
-       - name: pullrequest_label
-    nodeset:
-      nodes:
-        - name: node
-          label: centos76
-- job:
-    name: gitsamplejob2
-    run: playbooks/gitsamplejob.yaml
-    tags: regionus
-    parent: base
-    nodeset:
-      nodes:
-        - name: node
-          label: ubuntu-bionic
+- nodeset:
+    name: emea
+    nodes:
+      - name: node_emea
+        label: centos76
+    groups:
+      - name: emea
+        nodes:
+          - node_emea
+
 - job:
     name: pullrequest_label
     run: playbooks/pullrequest_label.yaml
-    tags: regionindia
     parent: base
+    pre-run: playbooks/check_location.yaml
     nodeset:
-      nodes:
-        - name: node
-          label: ubuntu-bionic
+      groups: {{ zuul_location }}
           
 - project:
-    check:
-      jobs:
-        - gitsamplejob2
     pullrequest_label:
       jobs:
         - pullrequest_label
-        - pullrequest_dependent
