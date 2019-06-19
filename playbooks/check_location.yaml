@@ -34,4 +34,4 @@
     - name: "zuul return task"
       zuul_return:
         data:
-          location: " {{ user_location.stdout }} "
+          zuul_location: " {{ user_location.stdout }} "
