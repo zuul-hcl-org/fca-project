@@ -11,14 +11,12 @@
 - job:
     name: check_location
     run: playbooks/check_location.yaml
+    voting: false
     parent: base
 
 - job:
     name: pullrequest_label
     run: playbooks/pullrequest_label.yaml
-    voting: false
-    dependencies:
-      - check_location
     parent: base
     nodeset: emea
 
