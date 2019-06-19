@@ -1,18 +1,8 @@
 - hosts: all
   gather_facts: true
   vars:
-    tags_available: " {{ zuul.jobtags }} "
+    zuul_loc: " {{ zuul.location }} "
   tasks:
     - name: pull request label job
       debug:
-        msg: " {{ tags_available }} in pull request label job {{ zuul.jobtags }} {{ zuul.change_url }} "
-    - name: "zuul return task"
-      zuul_return:
-        data:
-          zuul_tag: " {{ tags_available }} "
-    - debug:
-      msg: "{{ zuul.change_url }}"
-    - shell: |
-             echo {{ zuul.change_url }} | cut -d '/' -f 7
-      register: pullid
-    - debug: msg="{{ pullid }}"     
+        msg: " {{ zuul_loc }} and {{ zuul.change_url }} " 
