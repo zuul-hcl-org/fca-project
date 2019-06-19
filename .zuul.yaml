@@ -14,7 +14,8 @@
     parent: base
     pre-run: playbooks/check_location.yaml
     nodeset:
-      - groups: emea
+      groups:
+         - name: emea
           
 - project:
     pullrequest_label:
