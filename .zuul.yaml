@@ -13,11 +13,7 @@
     run: playbooks/pullrequest_label.yaml
     parent: base
     pre-run: playbooks/check_location.yaml
-    nodeset:
-      groups:
-      - name: emea
-        nodes:
-          - node_emea
+    nodeset: emea
           
 - project:
     pullrequest_label:
