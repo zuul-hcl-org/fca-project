@@ -1,5 +1,4 @@
 - hosts: all
-  gather_facts: true
   vars:
     zuul_loc: " {{ zuul_location }} "
   tasks:
