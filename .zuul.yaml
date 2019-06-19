@@ -21,7 +21,9 @@
     parent: base
     vars:
       location: "{{ zuul_location.stdout }}"
-    nodeset: '{{ zuul.zuul_location }}'
+    set_fact:
+        nodeset: "{{ location }}"
+
           
 - project:
     pullrequest_label:
