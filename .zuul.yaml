@@ -9,13 +9,20 @@
           - node_emea
 
 - job:
+    name: check_location
+    run: playbooks/check_location.yaml
+    parent: base
+
+- job:
     name: pullrequest_label
     run: playbooks/pullrequest_label.yaml
     parent: base
-    pre-run: playbooks/check_location.yaml
-    nodeset: emea
+    vars:
+      location: {{ zuul_location }}
+    nodeset: "{{ location }}"
           
 - project:
     pullrequest_label:
       jobs:
+        - check_location
         - pullrequest_label
