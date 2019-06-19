@@ -16,6 +16,7 @@
 - job:
     name: pullrequest_label
     run: playbooks/pullrequest_label.yaml
+    voting: false
     dependencies:
       - check_location
     parent: base
