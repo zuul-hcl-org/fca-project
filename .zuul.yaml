@@ -26,8 +26,3 @@
       jobs:
         - check_location
         - pullrequest_label
-             nodeset:
-               - name: emea
-                 nodes:
-                   - name: node_emea
-                     label: centos76
