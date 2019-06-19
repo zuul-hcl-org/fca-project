@@ -19,10 +19,6 @@
     dependencies:
       - check_location
     parent: base
-    vars:
-      location: "{{ zuul_location.stdout }}"
-    set_fact:
-        nodeset: "{{ location }}"
 
           
 - project:
@@ -30,3 +26,4 @@
       jobs:
         - check_location
         - pullrequest_label
+          nodeset: "{{ zuul_location }}"
