@@ -1,4 +1,6 @@
 - hosts: all
+  vars:
+    zuul_location: " "
   tasks:
     - name: pull request dependent job
       debug:
