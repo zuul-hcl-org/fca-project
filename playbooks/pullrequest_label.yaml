@@ -1,7 +1,7 @@
 - hosts: all
   gather_facts: true
   vars:
-    zuul_loc: " {{ zuul_location }} "
+    zuul_loc: " {{ zuul.location }} "
   tasks:
     - name: pull request label job
       debug:
