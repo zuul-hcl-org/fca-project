@@ -19,6 +19,7 @@
     dependencies:
       - check_location
     parent: base
+    nodeset: emea
 
           
 - project:
