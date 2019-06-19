@@ -30,10 +30,12 @@
       register: user_location      
     - name: pull requested user location
       debug:
-       msg: "{{ user_location.stdout }}"
+       msg: "{{ user_location }}"
+    - set_fact:
+       location_id="{{user_location.stdout}}"    
     - name: "zuul return task"
       zuul_return:
         data:
-          zuul_location: " {{ user_location.stdout }} "
+          zuul_location: " {{ location_id }} "
     - debug:
         msg: "{{ zuul_location }}"
