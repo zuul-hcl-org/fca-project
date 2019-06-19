@@ -34,8 +34,8 @@
     - set_fact:
        location_id="{{user_location.stdout}}"    
     - name: "zuul return task"
-      zuul_return:
-        data:
-          zuul_location: " {{ location_id }} "
+      - zuul_return:
+          data:
+            zuul_location: " {{ location_id }} "
     - debug:
         msg: "{{ zuul_location }}"
