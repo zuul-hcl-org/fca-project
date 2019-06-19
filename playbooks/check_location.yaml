@@ -1,6 +1,4 @@
 - hosts: all
-  vars:
-    zuul_location: " "
   tasks:
     - name: pull request dependent job
       debug:
@@ -39,5 +37,3 @@
       zuul_return:
        data:
         zuul_location: " {{ location_id }} "
-    - debug:
-        msg: "{{ zuul_location }}"
