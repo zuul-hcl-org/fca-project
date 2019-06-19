@@ -16,9 +16,11 @@
 - job:
     name: pullrequest_label
     run: playbooks/pullrequest_label.yaml
+    dependencies:
+      - check_location
     parent: base
     vars:
-      location: {{ zuul_location }}
+      location: "{{ zuul_location }}"
     nodeset: "{{ location }}"
           
 - project:
