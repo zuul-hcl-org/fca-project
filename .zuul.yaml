@@ -17,6 +17,8 @@
 - job:
     name: pullrequest_label
     run: playbooks/pullrequest_label.yaml
+    dependencies:
+      - check_location
     parent: base
     nodeset: emea
 
