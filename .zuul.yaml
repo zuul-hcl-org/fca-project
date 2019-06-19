@@ -21,7 +21,7 @@
     parent: base
     vars:
       location: "{{ zuul_location }}"
-    nodeset: "{{ location }}"
+    nodeset: emea
           
 - project:
     pullrequest_label:
